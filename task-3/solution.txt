@@ -35,13 +35,9 @@ touch summary.txt
 echo "Summary start" > summary.txt
 date >> summary.txt
 wc -l < summary.txt | tee -a summary.txt
-cd reports                             
-wc -w report1.md
-cd .. 
-cd logs
-wc -c system.log >> summary.txt
-cd ..
-find -type f -o -type d | wc -l >> summary.txt
+wc -w < reports/report1.md
+wc -c < logs/system.log >> summary.txt
+find ~/project_files -type f -o -type d | wc -l >> summary.txt
 cat summary.txt
 
 
