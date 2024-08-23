@@ -5,9 +5,7 @@ groups newuser
 mkdir ~/task_dir
 cd ~/task_dir
 touch sample.txt
-chmod u+rw sample.txt
-chmod g+r sample.txt
-chmod o-rwx sample.txt
+chmod 640 sample.txt
 sudo chown newuser sample.txt
 sudo chgrp newgroup sample.txt
 sudo groupdel newgroup
